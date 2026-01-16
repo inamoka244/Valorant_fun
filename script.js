@@ -7,30 +7,30 @@
 // ============================================
 
 const agents = [
-    { name: "Jett", role: "Duelist", icon: "💨", color: "#7dd3fc" },
-    { name: "Phoenix", role: "Duelist", icon: "🔥", color: "#f97316" },
-    { name: "Reyna", role: "Duelist", icon: "👁️", color: "#a855f7" },
-    { name: "Raze", role: "Duelist", icon: "💣", color: "#f59e0b" },
-    { name: "Yoru", role: "Duelist", icon: "🌀", color: "#3b82f6" },
-    { name: "Neon", role: "Duelist", icon: "⚡", color: "#22d3ee" },
-    { name: "Iso", role: "Duelist", icon: "🔮", color: "#8b5cf6" },
-    { name: "Sage", role: "Sentinel", icon: "💚", color: "#22c55e" },
-    { name: "Cypher", role: "Sentinel", icon: "📷", color: "#f5f5f4" },
-    { name: "Killjoy", role: "Sentinel", icon: "🤖", color: "#fbbf24" },
-    { name: "Chamber", role: "Sentinel", icon: "🎩", color: "#d4af37" },
-    { name: "Deadlock", role: "Sentinel", icon: "🔒", color: "#94a3b8" },
-    { name: "Sova", role: "Initiator", icon: "🏹", color: "#60a5fa" },
-    { name: "Breach", role: "Initiator", icon: "💪", color: "#f97316" },
-    { name: "Skye", role: "Initiator", icon: "🦅", color: "#84cc16" },
-    { name: "KAY/O", role: "Initiator", icon: "🤖", color: "#64748b" },
-    { name: "Fade", role: "Initiator", icon: "👻", color: "#6366f1" },
-    { name: "Gekko", role: "Initiator", icon: "🦎", color: "#a3e635" },
-    { name: "Brimstone", role: "Controller", icon: "☁️", color: "#f97316" },
-    { name: "Omen", role: "Controller", icon: "👤", color: "#6366f1" },
-    { name: "Viper", role: "Controller", icon: "☠️", color: "#22c55e" },
-    { name: "Astra", role: "Controller", icon: "⭐", color: "#a855f7" },
-    { name: "Harbor", role: "Controller", icon: "🌊", color: "#0ea5e9" },
-    { name: "Clove", role: "Controller", icon: "🦋", color: "#ec4899" }
+    { name: "Jett", role: "Duelist", icon: "💨", color: "#7dd3fc", image: "assets/agents/jett.png" },
+    { name: "Phoenix", role: "Duelist", icon: "🔥", color: "#f97316", image: "assets/agents/phoenix.png" },
+    { name: "Reyna", role: "Duelist", icon: "👁️", color: "#a855f7", image: "assets/agents/reyna.png" },
+    { name: "Raze", role: "Duelist", icon: "💣", color: "#f59e0b", image: "assets/agents/raze.png" },
+    { name: "Yoru", role: "Duelist", icon: "🌀", color: "#3b82f6", image: "assets/agents/yoru.png" },
+    { name: "Neon", role: "Duelist", icon: "⚡", color: "#22d3ee", image: "assets/agents/neon.png" },
+    { name: "Iso", role: "Duelist", icon: "🔮", color: "#8b5cf6", image: "assets/agents/iso.png" },
+    { name: "Sage", role: "Sentinel", icon: "💚", color: "#22c55e", image: "assets/agents/sage.png" },
+    { name: "Cypher", role: "Sentinel", icon: "📷", color: "#f5f5f4", image: "assets/agents/cypher.png" },
+    { name: "Killjoy", role: "Sentinel", icon: "🤖", color: "#fbbf24", image: "assets/agents/killjoy.png" },
+    { name: "Chamber", role: "Sentinel", icon: "🎩", color: "#d4af37", image: "assets/agents/chamber.png" },
+    { name: "Deadlock", role: "Sentinel", icon: "🔒", color: "#94a3b8", image: "assets/agents/deadlock.png" },
+    { name: "Sova", role: "Initiator", icon: "🏹", color: "#60a5fa", image: "assets/agents/sova.png" },
+    { name: "Breach", role: "Initiator", icon: "💪", color: "#f97316", image: "assets/agents/breach.png" },
+    { name: "Skye", role: "Initiator", icon: "🦅", color: "#84cc16", image: "assets/agents/skye.png" },
+    { name: "KAY/O", role: "Initiator", icon: "🤖", color: "#64748b", image: "assets/agents/kayo.png" },
+    { name: "Fade", role: "Initiator", icon: "👻", color: "#6366f1", image: "assets/agents/fade.png" },
+    { name: "Gekko", role: "Initiator", icon: "🦎", color: "#a3e635", image: "assets/agents/gekko.png" },
+    { name: "Brimstone", role: "Controller", icon: "☁️", color: "#f97316", image: "assets/agents/brimstone.png" },
+    { name: "Omen", role: "Controller", icon: "👤", color: "#6366f1", image: "assets/agents/omen.png" },
+    { name: "Viper", role: "Controller", icon: "☠️", color: "#22c55e", image: "assets/agents/viper.png" },
+    { name: "Astra", role: "Controller", icon: "⭐", color: "#a855f7", image: "assets/agents/astra.png" },
+    { name: "Harbor", role: "Controller", icon: "🌊", color: "#0ea5e9", image: "assets/agents/harbor.png" },
+    { name: "Clove", role: "Controller", icon: "🦋", color: "#ec4899", image: "assets/agents/clove.png" }
 ];
 
 const agentMessages = [
@@ -316,9 +316,14 @@ function pickRandomAgent() {
     void agentCard.offsetWidth; // Trigger reflow
     agentCard.classList.add('revealed');
     
-    // Update content
-    agentIcon.textContent = agent.icon;
-    agentIcon.style.textShadow = `0 0 30px ${agent.color}`;
+    // Update content - use image instead of emoji
+    if (agent.image) {
+        agentIcon.innerHTML = `<img src="${agent.image}" alt="${agent.name}" class="agent-img">`;
+        agentIcon.style.textShadow = 'none';
+    } else {
+        agentIcon.textContent = agent.icon;
+        agentIcon.style.textShadow = `0 0 30px ${agent.color}`;
+    }
     agentName.textContent = agent.name;
     agentName.style.color = agent.color;
     agentRole.textContent = agent.role;
@@ -461,7 +466,11 @@ function shuffleRankings() {
             const agent = shuffledAgents[index];
             const agentEl = document.createElement('span');
             agentEl.className = 'tier-agent';
-            agentEl.textContent = `${agent.icon} ${agent.name}`;
+            if (agent.image) {
+                agentEl.innerHTML = `<img src="${agent.image}" alt="${agent.name}" class="tier-agent-img"> ${agent.name}`;
+            } else {
+                agentEl.textContent = `${agent.icon} ${agent.name}`;
+            }
             agentEl.title = agent.role;
             tier.appendChild(agentEl);
             index++;

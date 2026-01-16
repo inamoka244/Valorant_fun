@@ -1002,3 +1002,37 @@ body {
         transform: translateX(5px);
     }
 }
+
+
+/* ============================================
+   AGENT IMAGES
+   ============================================ */
+.agent-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-red);
+    box-shadow: 0 0 20px var(--glow-red);
+    transition: var(--transition-normal);
+}
+
+.agent-card:hover .agent-img {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--glow-red);
+}
+
+.tier-agent-img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 4px;
+    border: 1px solid var(--primary-red);
+}
+
+.tier-agent {
+    display: inline-flex;
+    align-items: center;
+}
