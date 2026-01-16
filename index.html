@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Agent... But Badly 👾</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="smoke smoke-1"></div>
+        <div class="smoke smoke-2"></div>
+        <div class="smoke smoke-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container" id="logo">
+            <div class="logo-icon">V</div>
+            <h1 class="logo-text">VALORANT<span class="logo-sub">...kinda</span></h1>
+        </div>
+        <h2 class="tagline">Choose your Agent… but badly</h2>
+        <p class="disclaimer">⚠️ Fan-made parody. Not affiliated with Riot Games.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Section 1: Agent Selector -->
+        <section class="section agent-section" id="agent-section">
+            <div class="section-header">
+                <h2 class="section-title">🎯 Random Agent Selector</h2>
+                <p class="section-desc">Let fate decide your main... and your rank.</p>
+            </div>
+            
+            <div class="agent-display">
+                <div class="agent-card" id="agent-card">
+                    <div class="agent-icon" id="agent-icon">?</div>
+                    <div class="agent-name" id="agent-name">???</div>
+                    <div class="agent-role" id="agent-role">Press the button</div>
+                </div>
+                <div class="agent-message" id="agent-message">
+                    <p>Your destiny awaits...</p>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary" id="pick-agent-btn">
+                <span class="btn-icon">🎲</span>
+                Pick Random Agent
+            </button>
+        </section>
+
+        <!-- Section 2: Ability Chaos -->
+        <section class="section ability-section" id="ability-section">
+            <div class="section-header">
+                <h2 class="section-title">💥 Ability Chaos Generator</h2>
+                <p class="section-desc">What if agents swapped abilities? Pure chaos.</p>
+            </div>
+            
+            <div class="chaos-display">
+                <div class="chaos-card">
+                    <div class="chaos-agent" id="chaos-agent">???</div>
+                    <div class="chaos-with">with</div>
+                    <div class="chaos-ability" id="chaos-ability">???'s ability</div>
+                </div>
+                <div class="chaos-message" id="chaos-message">
+                    <p>Press the button to break the game...</p>
+                </div>
+            </div>
+            
+            <button class="btn btn-chaos" id="chaos-btn">
+                <span class="btn-icon">🌀</span>
+                Random Ability Chaos
+            </button>
+        </section>
+
+        <!-- Section 3: Sage Heal Mini Game -->
+        <section class="section game-section" id="game-section">
+            <div class="section-header">
+                <h2 class="section-title">💚 Spam Sage Heal</h2>
+                <p class="section-desc">Your teammates need healing. AGAIN.</p>
+            </div>
+            
+            <div class="game-display">
+                <div class="heal-counter">
+                    <span class="counter-label">Heal Requests:</span>
+                    <span class="counter-value" id="heal-counter">0</span>
+                </div>
+                <div class="sage-status" id="sage-status">
+                    <p>Sage is ready to heal!</p>
+                </div>
+                <div class="sage-emoji" id="sage-emoji">🧘‍♀️</div>
+            </div>
+            
+            <button class="btn btn-heal" id="heal-btn">
+                <span class="btn-icon">💉</span>
+                SAGE HEAL ME!
+            </button>
+        </section>
+
+        <!-- Section 4: Toxic Chat Simulator -->
+        <section class="section chat-section" id="chat-section">
+            <div class="section-header">
+                <h2 class="section-title">💬 Toxic Chat Simulator</h2>
+                <p class="section-desc">Experience ranked comms without the trauma.</p>
+            </div>
+            
+            <div class="chat-display">
+                <div class="chat-window" id="chat-window">
+                    <div class="chat-message system">
+                        <span class="chat-sender">[SYSTEM]</span>
+                        <span class="chat-text">Welcome to Valorant chat...</span>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" id="chat-input" placeholder="Type something nice..." maxlength="100">
+                    <button class="btn btn-send" id="send-btn">Send</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Fake Patch Notes -->
+        <section class="section patch-section" id="patch-section">
+            <div class="section-header">
+                <h2 class="section-title">📋 Fake Patch Notes</h2>
+                <p class="section-desc">Totally real updates from the dev team.</p>
+            </div>
+            
+            <div class="patch-display">
+                <div class="patch-note" id="patch-note">
+                    <div class="patch-version">Patch 99.99</div>
+                    <div class="patch-content">Click to generate patch notes...</div>
+                </div>
+            </div>
+            
+            <button class="btn btn-patch" id="patch-btn">
+                <span class="btn-icon">📝</span>
+                Generate Patch Notes
+            </button>
+        </section>
+
+        <!-- Section 6: Agent Power Ranking (Wrong) -->
+        <section class="section ranking-section" id="ranking-section">
+            <div class="section-header">
+                <h2 class="section-title">📊 Agent Power Ranking</h2>
+                <p class="section-desc">100% accurate tier list (trust me bro)</p>
+            </div>
+            
+            <div class="ranking-display">
+                <div class="tier tier-s">
+                    <div class="tier-label">S</div>
+                    <div class="tier-agents" id="tier-s"></div>
+                </div>
+                <div class="tier tier-a">
+                    <div class="tier-label">A</div>
+                    <div class="tier-agents" id="tier-a"></div>
+                </div>
+                <div class="tier tier-b">
+                    <div class="tier-label">B</div>
+                    <div class="tier-agents" id="tier-b"></div>
+                </div>
+                <div class="tier tier-f">
+                    <div class="tier-label">F</div>
+                    <div class="tier-agents" id="tier-f"></div>
+                </div>
+            </div>
+            
+            <button class="btn btn-ranking" id="ranking-btn">
+                <span class="btn-icon">🔀</span>
+                Shuffle Rankings
+            </button>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-jokes">
+            <p class="joke" id="footer-joke">"Jett diff" - Every bottom fragger ever</p>
+        </div>
+        <div class="footer-info">
+            <p>Made with 💔 and caffeine</p>
+            <p class="footer-disclaimer">This is a fan-made parody page. VALORANT is a trademark of Riot Games.</p>
+        </div>
+        <div class="theme-toggle">
+            <button class="btn btn-theme" id="theme-btn">
+                <span class="btn-icon">🔴</span>
+                Toggle Red/Dark Mode
+            </button>
+        </div>
+    </footer>
+
+    <!-- Easter Egg Popup -->
+    <div class="popup" id="grass-popup">
+        <div class="popup-content">
+            <p class="popup-text">Go touch grass 🌱</p>
+            <button class="btn btn-close" id="close-grass">OK, I will...</button>
+        </div>
+    </div>
+
+    <!-- Idle Popup -->
+    <div class="popup" id="idle-popup">
+        <div class="popup-content">
+            <p class="popup-text">Still here? Queue dodge? 🤔</p>
+            <button class="btn btn-close" id="close-idle">I'm still playing!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
