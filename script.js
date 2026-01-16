@@ -345,11 +345,15 @@ function generateAbilityChaos() {
         ability = getRandomItem(abilities);
     } while (ability.agent === agent1.name);
     
+    // Find the ability of agent1 (the displayed agent) to get its description
+    const agent1Ability = abilities.find(a => a.agent === agent1.name);
+    const agent1Description = agent1Ability ? agent1Ability.description : '';
+    
     const message = getRandomItem(chaosMessages);
     
     chaosAgent.textContent = agent1.name;
     chaosAbility.textContent = `${ability.agent}'s ${ability.ability}`;
-    chaosMessage.innerHTML = `<p>"${message}"</p><p class="ability-desc">${ability.description}</p>`;
+    chaosMessage.innerHTML = `<p>"${message}"</p><p class="ability-desc">${agent1Description}</p>`;
     
     // Button feedback
     chaosBtn.classList.add('shake');
