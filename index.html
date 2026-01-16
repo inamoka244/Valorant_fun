@@ -344,6 +344,119 @@
             </div>
         </section>
 
+        <!-- Section 13: Agent Pickup Lines -->
+        <section class="section pickup-section" id="pickup-section">
+            <div class="section-header">
+                <h2 class="section-title">🎭 Agent Pickup Lines</h2>
+                <p class="section-desc">Cringe-worthy lines from your favorite agents.</p>
+            </div>
+            
+            <div class="pickup-display">
+                <div class="pickup-card" id="pickup-card">
+                    <div class="pickup-agent" id="pickup-agent">???</div>
+                    <div class="pickup-line" id="pickup-line">"Click to get a pickup line..."</div>
+                </div>
+                <div class="pickup-rating">
+                    <span>Cringe Level: </span>
+                    <span id="pickup-cringe">😬😬😬😬😬</span>
+                </div>
+            </div>
+            
+            <button class="btn btn-pickup" id="pickup-btn">
+                <span class="btn-icon">💘</span>
+                Generate Pickup Line
+            </button>
+        </section>
+
+        <!-- Section 14: Hardstuck Calculator -->
+        <section class="section hardstuck-section" id="hardstuck-section">
+            <div class="section-header">
+                <h2 class="section-title">🏆 Hardstuck Rank Calculator</h2>
+                <p class="section-desc">Find out why you're not climbing.</p>
+            </div>
+            
+            <div class="hardstuck-display">
+                <div class="hardstuck-inputs">
+                    <div class="hardstuck-input-group">
+                        <label>Hours Played:</label>
+                        <select id="hardstuck-hours">
+                            <option value="100">100-500</option>
+                            <option value="500">500-1000</option>
+                            <option value="1000">1000-2000</option>
+                            <option value="2000">2000+</option>
+                        </select>
+                    </div>
+                    <div class="hardstuck-input-group">
+                        <label>Current Rank:</label>
+                        <select id="hardstuck-current">
+                            <option value="iron">Iron</option>
+                            <option value="bronze">Bronze</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                            <option value="platinum">Platinum</option>
+                            <option value="diamond">Diamond</option>
+                            <option value="ascendant">Ascendant</option>
+                            <option value="immortal">Immortal</option>
+                            <option value="radiant">Radiant</option>
+                        </select>
+                    </div>
+                    <div class="hardstuck-input-group">
+                        <label>Peak Rank:</label>
+                        <select id="hardstuck-peak">
+                            <option value="iron">Iron</option>
+                            <option value="bronze">Bronze</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                            <option value="platinum">Platinum</option>
+                            <option value="diamond">Diamond</option>
+                            <option value="ascendant">Ascendant</option>
+                            <option value="immortal">Immortal</option>
+                            <option value="radiant">Radiant</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="hardstuck-result" id="hardstuck-result">
+                    <p class="diagnosis-title">Your Diagnosis:</p>
+                    <p class="diagnosis-text" id="diagnosis-text">Enter your info and click calculate...</p>
+                    <p class="treatment-title">Treatment Plan:</p>
+                    <p class="treatment-text" id="treatment-text">Awaiting diagnosis...</p>
+                </div>
+            </div>
+            
+            <button class="btn btn-hardstuck" id="hardstuck-btn">
+                <span class="btn-icon">🩺</span>
+                Calculate My Hardstuck Level
+            </button>
+        </section>
+
+        <!-- Section 15: Clutch or Choke Simulator -->
+        <section class="section clutch-section" id="clutch-section">
+            <div class="section-header">
+                <h2 class="section-title">🎬 Clutch or Choke Simulator</h2>
+                <p class="section-desc">Can you handle the pressure?</p>
+            </div>
+            
+            <div class="clutch-display">
+                <div class="clutch-scenario" id="clutch-scenario">
+                    <p class="scenario-text" id="scenario-text">You're in a 1v3 clutch situation. The spike is planted. 20 seconds left. What do you do?</p>
+                </div>
+                <div class="clutch-choices" id="clutch-choices">
+                    <button class="choice-btn" data-choice="peek">👁️ Peek Aggressively</button>
+                    <button class="choice-btn" data-choice="hold">🛡️ Hold Angle</button>
+                    <button class="choice-btn" data-choice="ability">✨ Use Ability</button>
+                    <button class="choice-btn" data-choice="rotate">🏃 Rotate</button>
+                </div>
+                <div class="clutch-result" id="clutch-result">
+                    <p>Make your choice...</p>
+                </div>
+            </div>
+            
+            <button class="btn btn-clutch" id="clutch-reset-btn">
+                <span class="btn-icon">🔄</span>
+                New Clutch Scenario
+            </button>
+        </section>
+
     </main>
 
     <!-- Footer -->

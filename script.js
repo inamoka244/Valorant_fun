@@ -369,6 +369,105 @@ const soundboardComms = {
     clutch: ["CLUTCH OR KICK", "You got this", "Don't choke", "Everyone's watching", "No pressure"]
 };
 
+const pickupLines = [
+    { agent: "Jett", line: "Are you a spike? Because I'd rush to plant you anywhere.", cringe: 4 },
+    { agent: "Jett", line: "I dash into every fight, but I'd slow down for you.", cringe: 3 },
+    { agent: "Phoenix", line: "I can heal myself, but only you can fix my broken heart.", cringe: 5 },
+    { agent: "Phoenix", line: "Are you my flash? Because you're blinding me with your beauty.", cringe: 4 },
+    { agent: "Sage", line: "I can resurrect the dead, but I can't resurrect your love life... unless?", cringe: 5 },
+    { agent: "Sage", line: "I'll heal you, but only if you heal my loneliness.", cringe: 4 },
+    { agent: "Cypher", line: "I've been watching you... through my camera. In a non-creepy way.", cringe: 5 },
+    { agent: "Cypher", line: "My tripwire caught something... my feelings for you.", cringe: 4 },
+    { agent: "Reyna", line: "I usually dismiss everyone, but I can't dismiss these feelings.", cringe: 3 },
+    { agent: "Reyna", line: "I feed on souls, but I'd rather feed on your attention.", cringe: 5 },
+    { agent: "Omen", line: "I can teleport anywhere, but I always end up thinking about you.", cringe: 3 },
+    { agent: "Omen", line: "They call me Omen, but meeting you feels like a blessing.", cringe: 4 },
+    { agent: "Sova", line: "My recon bolt found something... it's my love for you.", cringe: 4 },
+    { agent: "Sova", line: "I never miss my lineups, and I won't miss my shot with you.", cringe: 3 },
+    { agent: "Killjoy", line: "My turret locks onto enemies, but my heart locks onto you.", cringe: 4 },
+    { agent: "Killjoy", line: "I'm a genius, but I can't figure out why I'm so into you.", cringe: 3 },
+    { agent: "Viper", line: "I'm toxic to everyone, but I'd be sweet for you.", cringe: 4 },
+    { agent: "Viper", line: "My poison won't hurt you... but my love might.", cringe: 5 },
+    { agent: "Brimstone", line: "I call down smokes, but you take my breath away.", cringe: 4 },
+    { agent: "Brimstone", line: "I've got orbital strikes, but you've struck my heart.", cringe: 5 },
+    { agent: "Raze", line: "I usually blow things up, but you blew my mind.", cringe: 3 },
+    { agent: "Raze", line: "My satchels send me flying, but so does thinking about you.", cringe: 4 },
+    { agent: "Yoru", line: "I can fake teleport, but my feelings for you are real.", cringe: 3 },
+    { agent: "Yoru", line: "I'm from another dimension, but I'd cross any for you.", cringe: 4 },
+    { agent: "Gekko", line: "My pets are cute, but not as cute as you.", cringe: 3 },
+    { agent: "Gekko", line: "Wingman plants the spike, but you planted yourself in my heart.", cringe: 5 }
+];
+
+const hardstuckDiagnoses = [
+    "Chronic Aim Deficiency Syndrome",
+    "Terminal Ego Inflation",
+    "Severe Teammate Blame Disorder",
+    "Acute Gaming Chair Dysfunction",
+    "Persistent Map Awareness Blindness",
+    "Advanced Crosshair Placement Amnesia",
+    "Critical Economy Mismanagement",
+    "Extreme Tilt Susceptibility",
+    "Chronic Overpeek Syndrome",
+    "Terminal Solo Queue Addiction"
+];
+
+const hardstuckTreatments = [
+    "Touch grass for 2 hours daily",
+    "Watch your own VODs (if you can handle the cringe)",
+    "Stop blaming your teammates for 1 whole week",
+    "Actually use your utility instead of saving it for next game",
+    "Lower your sensitivity, your arm isn't a helicopter",
+    "Stop instalocking and try filling for once",
+    "Aim trainer for 30 mins before ranked (you won't)",
+    "Take a break after 2 losses (revolutionary concept)",
+    "Communicate with your team (scary, I know)",
+    "Accept that you're the common factor in all your losses",
+    "Upgrade from McDonald's WiFi",
+    "Stop playing at 3 AM when your brain is mush",
+    "Learn more than one agent",
+    "Stop wide swinging every corner"
+];
+
+const clutchScenarios = [
+    "You're in a 1v3. Spike planted A site. 25 seconds left. They're spread out.",
+    "1v2 situation. You have an Operator. They know your position.",
+    "1v4 clutch. You have a Vandal and full util. Spike is down.",
+    "1v1 for the match. Enemy has an Operator. You have a Sheriff.",
+    "1v3 retake. Spike planted B. You have 30 seconds and no util.",
+    "1v2. You're Jett with 2 dashes. They're both holding angles."
+];
+
+const clutchOutcomes = {
+    peek: [
+        { result: "CHOKE", text: "You peeked... and whiffed 27 bullets. The enemy knifed you. Chat is typing." },
+        { result: "CHOKE", text: "You wide swung into 3 people. Instant death. Your team is malding." },
+        { result: "CLUTCH", text: "You peeked and hit a nasty one-tap! One down, two to go... and you got them all!" },
+        { result: "CHOKE", text: "You peeked, got one kill, then got traded immediately. So close." },
+        { result: "CLUTCH", text: "Aggressive peek paid off! Triple kill with a spray transfer. INSANE!" }
+    ],
+    hold: [
+        { result: "CLUTCH", text: "You held the angle perfectly. They pushed one by one. Easy 3k." },
+        { result: "CHOKE", text: "You held the angle... for 20 seconds. Then you got impatient and died." },
+        { result: "CHOKE", text: "You held, but they flanked. You heard nothing. Gaming headset diff." },
+        { result: "CLUTCH", text: "Patient hold. First kill. Rotate. Second kill. Defuse. CLUTCH!" },
+        { result: "CHOKE", text: "You held so long the spike exploded. You forgot about the timer." }
+    ],
+    ability: [
+        { result: "CLUTCH", text: "Perfect ability usage! Blinded two, killed them both, clutched the round!" },
+        { result: "CHOKE", text: "You used your ability... and flashed yourself. The enemy laughed." },
+        { result: "CHOKE", text: "Your smoke landed on yourself. You couldn't see anything. Dead." },
+        { result: "CLUTCH", text: "Utility diff! Your abilities created chaos and you cleaned up!" },
+        { result: "CHOKE", text: "You threw your molly... at your own feet. Self-cooked." }
+    ],
+    rotate: [
+        { result: "CLUTCH", text: "Big brain rotate! Caught them off guard. 3 quick kills. CLUTCH!" },
+        { result: "CHOKE", text: "You rotated... into all 3 of them. They were rotating too." },
+        { result: "CHOKE", text: "You rotated so slow the spike exploded. Time management diff." },
+        { result: "CLUTCH", text: "Silent rotate through spawn. Backstab triple kill. Legendary!" },
+        { result: "CHOKE", text: "You rotated, but your footsteps were louder than a concert. Prefired." }
+    ]
+};
+
 // ============================================
 // STATE VARIABLES
 // ============================================
@@ -445,6 +544,24 @@ const predictionReason = document.getElementById('prediction-reason');
 
 const soundboardGrid = document.getElementById('soundboard-grid');
 const soundboardOutput = document.getElementById('soundboard-output');
+
+// New features - Pickup Lines, Hardstuck, Clutch
+const pickupBtn = document.getElementById('pickup-btn');
+const pickupAgent = document.getElementById('pickup-agent');
+const pickupLine = document.getElementById('pickup-line');
+const pickupCringe = document.getElementById('pickup-cringe');
+
+const hardstuckBtn = document.getElementById('hardstuck-btn');
+const hardstuckHours = document.getElementById('hardstuck-hours');
+const hardstuckCurrent = document.getElementById('hardstuck-current');
+const hardstuckPeak = document.getElementById('hardstuck-peak');
+const diagnosisText = document.getElementById('diagnosis-text');
+const treatmentText = document.getElementById('treatment-text');
+
+const clutchResetBtn = document.getElementById('clutch-reset-btn');
+const scenarioText = document.getElementById('scenario-text');
+const clutchChoices = document.getElementById('clutch-choices');
+const clutchResult = document.getElementById('clutch-result');
 
 const themeBtn = document.getElementById('theme-btn');
 const footerJoke = document.getElementById('footer-joke');
@@ -827,6 +944,109 @@ function initSoundboard() {
 }
 
 // ============================================
+// AGENT PICKUP LINES
+// ============================================
+
+function generatePickupLine() {
+    const pickup = getRandomItem(pickupLines);
+    
+    pickupAgent.textContent = pickup.agent;
+    pickupLine.textContent = `"${pickup.line}"`;
+    
+    // Generate cringe faces based on level
+    let cringe = '';
+    for (let i = 0; i < 5; i++) {
+        cringe += i < pickup.cringe ? '😬' : '😐';
+    }
+    pickupCringe.textContent = cringe;
+    
+    // Button feedback
+    pickupBtn.classList.add('shake');
+    setTimeout(() => pickupBtn.classList.remove('shake'), 500);
+}
+
+// ============================================
+// HARDSTUCK CALCULATOR
+// ============================================
+
+function calculateHardstuck() {
+    const hours = hardstuckHours.value;
+    const current = hardstuckCurrent.value;
+    const peak = hardstuckPeak.value;
+    
+    const diagnosis = getRandomItem(hardstuckDiagnoses);
+    const treatment = getRandomItem(hardstuckTreatments);
+    
+    // Add some context based on inputs
+    let extraRoast = '';
+    if (parseInt(hours) >= 2000 && (current === 'iron' || current === 'bronze')) {
+        extraRoast = ' (2000+ hours in low elo? Impressive commitment to being bad.)';
+    } else if (current === peak) {
+        extraRoast = ' (Never improved from your peak? Consistent, at least.)';
+    } else if (peak === 'radiant' && current !== 'radiant') {
+        extraRoast = ' (Fell from Radiant? The fall from grace is real.)';
+    }
+    
+    diagnosisText.textContent = diagnosis + extraRoast;
+    treatmentText.textContent = treatment;
+    
+    // Button feedback
+    hardstuckBtn.classList.add('shake');
+    setTimeout(() => hardstuckBtn.classList.remove('shake'), 500);
+}
+
+// ============================================
+// CLUTCH OR CHOKE SIMULATOR
+// ============================================
+
+function initClutchSimulator() {
+    // Set initial scenario
+    resetClutchScenario();
+    
+    // Add click listeners to choice buttons
+    const choiceBtns = clutchChoices.querySelectorAll('.choice-btn');
+    choiceBtns.forEach(btn => {
+        btn.addEventListener('click', () => handleClutchChoice(btn.dataset.choice));
+    });
+}
+
+function resetClutchScenario() {
+    const scenario = getRandomItem(clutchScenarios);
+    scenarioText.textContent = scenario;
+    clutchResult.innerHTML = '<p>Make your choice...</p>';
+    clutchResult.className = 'clutch-result';
+    
+    // Re-enable choice buttons
+    const choiceBtns = clutchChoices.querySelectorAll('.choice-btn');
+    choiceBtns.forEach(btn => {
+        btn.disabled = false;
+        btn.classList.remove('selected');
+    });
+}
+
+function handleClutchChoice(choice) {
+    const outcomes = clutchOutcomes[choice];
+    const outcome = getRandomItem(outcomes);
+    
+    // Disable all buttons and highlight selected
+    const choiceBtns = clutchChoices.querySelectorAll('.choice-btn');
+    choiceBtns.forEach(btn => {
+        btn.disabled = true;
+        if (btn.dataset.choice === choice) {
+            btn.classList.add('selected');
+        }
+    });
+    
+    // Show result with appropriate styling
+    const resultClass = outcome.result === 'CLUTCH' ? 'clutch-win' : 'clutch-lose';
+    clutchResult.innerHTML = `
+        <p class="outcome-title ${resultClass}">${outcome.result}!</p>
+        <p class="outcome-text">${outcome.text}</p>
+    `;
+    clutchResult.className = `clutch-result ${resultClass}`;
+}
+
+// ============================================
 // EVENT LISTENERS
 // ============================================
 
@@ -884,6 +1104,15 @@ bingoBtn.addEventListener('click', generateBingoCard);
 // Match Prediction
 predictionBtn.addEventListener('click', predictMatch);
 
+// Pickup Lines
+pickupBtn.addEventListener('click', generatePickupLine);
+
+// Hardstuck Calculator
+hardstuckBtn.addEventListener('click', calculateHardstuck);
+
+// Clutch Reset
+clutchResetBtn.addEventListener('click', resetClutchScenario);
+
 // Reset idle timer on any interaction
 document.addEventListener('mousemove', resetIdleTimer);
 document.addEventListener('keypress', resetIdleTimer);
@@ -912,6 +1141,9 @@ function init() {
     
     // Initialize soundboard
     initSoundboard();
+    
+    // Initialize clutch simulator
+    initClutchSimulator();
     
     console.log('%c🎮 VALORANT Fun Page Loaded!', 'color: #ff4655; font-size: 20px; font-weight: bold;');
     console.log('%cMade with 💔 and caffeine', 'color: #8b978f; font-size: 12px;');
