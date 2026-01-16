@@ -226,6 +226,150 @@ const footerJokes = [
 ];
 
 // ============================================
+// NEW FEATURE DATA
+// ============================================
+
+const cursedWeapons = [
+    "Classic (no abilities)",
+    "Shorty only",
+    "Bucky (long range only)",
+    "Stinger (tap fire only)",
+    "Marshal (no scope)",
+    "Judge (crouch only)",
+    "Ares (must spin up before every fight)",
+    "Odin (hip fire only)",
+    "Frenzy (single fire)",
+    "Ghost (spam click)"
+];
+
+const cursedArmor = [
+    "No armor (save for next life)",
+    "Light armor only (forever)",
+    "Full armor but no abilities",
+    "Armor but you must crouch walk",
+    "Heavy armor but no gun"
+];
+
+const cursedChallenges = [
+    "Must crouch walk the entire round",
+    "Can only shoot while jumping",
+    "Must reload after every kill",
+    "No minimap allowed",
+    "Must type 'sorry' after every kill",
+    "Play with monitor brightness at 10%",
+    "Must spin 360 before shooting",
+    "Only knife until you get a kill",
+    "Must callout in rhymes only",
+    "Play with inverted mouse",
+    "Must teabag after every kill",
+    "Can only use abilities, no gun",
+    "Must say 'pew pew' when shooting",
+    "Play with one eye closed",
+    "Must compliment enemy after dying"
+];
+
+const excuses = [
+    { text: "My cat walked across my keyboard", stars: 3 },
+    { text: "I was eating and couldn't aim", stars: 2 },
+    { text: "My mouse battery died mid-fight", stars: 4 },
+    { text: "The sun was in my eyes (I play in a basement)", stars: 1 },
+    { text: "I sneezed at the worst possible moment", stars: 4 },
+    { text: "My gaming chair wasn't reclined properly", stars: 1 },
+    { text: "I was lagging (20ms ping)", stars: 1 },
+    { text: "My little brother unplugged my PC", stars: 3 },
+    { text: "I was distracted by a TikTok notification", stars: 2 },
+    { text: "The enemy was clearly using hacks", stars: 1 },
+    { text: "My crosshair disappeared", stars: 3 },
+    { text: "I forgot I wasn't playing Fortnite", stars: 2 },
+    { text: "My energy drink wore off", stars: 2 },
+    { text: "I was testing a new sensitivity", stars: 3 },
+    { text: "My teammate's callout confused me", stars: 4 },
+    { text: "I was saving my abilities for next round", stars: 2 },
+    { text: "The server tick rate was against me", stars: 1 },
+    { text: "I'm actually a Radiant smurf having an off day", stars: 1 },
+    { text: "My dog needed to go outside urgently", stars: 4 },
+    { text: "I was watching my stocks drop", stars: 2 }
+];
+
+const crosshairRoasts = {
+    color: {
+        green: "Green? How original. Let me guess, you also main Sage?",
+        cyan: "Cyan crosshair? Trying to be different but still basic.",
+        white: "White crosshair? Can't even see it on Haven. Bold choice.",
+        pink: "Pink crosshair? Your enemies are dying of laughter, not your shots.",
+        yellow: "Yellow? Are you a traffic light or a gamer?"
+    },
+    size: {
+        small: "Small crosshair? Compensating for something... like your game sense.",
+        medium: "Medium size? The 'I have no personality' of crosshairs.",
+        large: "Large crosshair? Can you even see the enemies behind it?",
+        huge: "HUGE crosshair?! Are you playing on a TV from 2005?!"
+    },
+    style: {
+        dot: "Dot only? Minimalist or just can't handle complexity?",
+        cross: "Classic cross? Boring but at least you're trying.",
+        circle: "Circle crosshair? This isn't CS 1.6, grandpa.",
+        complex: "Complex crosshair? More lines than your actual game plan."
+    }
+};
+
+const bingoItems = [
+    "Instalock Jett",
+    "'Diff' in chat",
+    "AFK round 1",
+    "Sage no heal",
+    "'GG EZ' from bottom frag",
+    "Rage quit",
+    "Backseat gaming",
+    "'I'm lagging'",
+    "Blame the team",
+    "Mic breathing",
+    "Music in background",
+    "Dog barking",
+    "'Trust me'",
+    "Smoke own team",
+    "Flash own team",
+    "'One more'",
+    "Keyboard smash",
+    "'Unlucky'",
+    "Surrender vote round 5",
+    "'I'm warming up'",
+    "'Report X'",
+    "Crouch spam",
+    "Operator miss",
+    "Eco ace",
+    "Spike forgotten"
+];
+
+const matchPredictions = [
+    { result: "LOSS", score: "13 - 2", reason: "Your Jett will instalock and bottom frag" },
+    { result: "LOSS", score: "13 - 7", reason: "You'll choke every clutch situation" },
+    { result: "WIN", score: "13 - 11", reason: "Enemy team will have 2 AFKs" },
+    { result: "LOSS", score: "13 - 5", reason: "Your internet will lag at crucial moments" },
+    { result: "DRAW", score: "Overtime forever", reason: "Both teams are equally bad" },
+    { result: "WIN", score: "13 - 0", reason: "You're smurfing in Iron (shame on you)" },
+    { result: "LOSS", score: "13 - 1", reason: "You'll face a 5-stack of Radiants" },
+    { result: "WIN", score: "13 - 9", reason: "Your carry will actually show up today" },
+    { result: "LOSS", score: "13 - 8", reason: "Sage will never heal you" },
+    { result: "LOSS", score: "13 - 3", reason: "You'll miss every Operator shot" },
+    { result: "WIN", score: "13 - 6", reason: "Enemy Reyna will rage quit round 4" },
+    { result: "LOSS", score: "13 - 11", reason: "You'll throw a 10-2 lead" },
+    { result: "DRAW", score: "14 - 14", reason: "Nobody deserves to win this game" },
+    { result: "LOSS", score: "13 - 4", reason: "Your team will argue about who plays Omen" }
+];
+
+const soundboardComms = {
+    rush: ["RUSH B DON'T STOP", "GO GO GO", "FULL SEND", "EVERYONE B NOW"],
+    save: ["SAVE SAVE SAVE", "Don't buy", "Eco round", "Save for Op"],
+    rotate: ["ROTATE A", "They're not here", "FAST ROTATE", "Leave one"],
+    diff: ["Jett diff", "Aim diff", "Team diff", "Skill diff", "Gaming chair diff"],
+    nt: ["Nice try", "NT", "Good attempt", "Almost had it", "Unlucky"],
+    gg: ["GG", "Good game", "Well played", "GG WP"],
+    ff: ["FF 15", "Just surrender", "Open mid", "Go next", "This is unwinnable"],
+    clutch: ["CLUTCH OR KICK", "You got this", "Don't choke", "Everyone's watching", "No pressure"]
+};
+
+// ============================================
 // STATE VARIABLES
 // ============================================
 
@@ -273,6 +417,34 @@ const grassPopup = document.getElementById('grass-popup');
 const closeGrass = document.getElementById('close-grass');
 const idlePopup = document.getElementById('idle-popup');
 const closeIdle = document.getElementById('close-idle');
+
+// New feature elements
+const loadoutBtn = document.getElementById('loadout-btn');
+const loadoutWeapon = document.getElementById('loadout-weapon');
+const loadoutArmor = document.getElementById('loadout-armor');
+const loadoutChallenge = document.getElementById('loadout-challenge');
+
+const excuseBtn = document.getElementById('excuse-btn');
+const excuseText = document.getElementById('excuse-text');
+const excuseStars = document.getElementById('excuse-stars');
+
+const crosshairBtn = document.getElementById('crosshair-btn');
+const crosshairColor = document.getElementById('crosshair-color');
+const crosshairSize = document.getElementById('crosshair-size');
+const crosshairStyle = document.getElementById('crosshair-style');
+const crosshairRoast = document.getElementById('crosshair-roast');
+
+const bingoBtn = document.getElementById('bingo-btn');
+const bingoCard = document.getElementById('bingo-card');
+const bingoCount = document.getElementById('bingo-count');
+
+const predictionBtn = document.getElementById('prediction-btn');
+const predictionResult = document.getElementById('prediction-result');
+const predictionScore = document.getElementById('prediction-score');
+const predictionReason = document.getElementById('prediction-reason');
+
+const soundboardGrid = document.getElementById('soundboard-grid');
+const soundboardOutput = document.getElementById('soundboard-output');
 
 const themeBtn = document.getElementById('theme-btn');
 const footerJoke = document.getElementById('footer-joke');
@@ -516,6 +688,145 @@ function rotateFooterJoke() {
 }
 
 // ============================================
+// CURSED LOADOUT GENERATOR
+// ============================================
+
+function generateCursedLoadout() {
+    const weapon = getRandomItem(cursedWeapons);
+    const armor = getRandomItem(cursedArmor);
+    const challenge = getRandomItem(cursedChallenges);
+    
+    loadoutWeapon.textContent = weapon;
+    loadoutArmor.textContent = armor;
+    loadoutChallenge.textContent = challenge;
+    
+    // Button feedback
+    loadoutBtn.classList.add('shake');
+    setTimeout(() => loadoutBtn.classList.remove('shake'), 500);
+}
+
+// ============================================
+// EXCUSE GENERATOR
+// ============================================
+
+function generateExcuse() {
+    const excuse = getRandomItem(excuses);
+    excuseText.textContent = `"${excuse.text}"`;
+    
+    // Generate stars based on believability
+    let stars = '';
+    for (let i = 0; i < 5; i++) {
+        stars += i < excuse.stars ? '⭐' : '☆';
+    }
+    excuseStars.textContent = stars;
+    
+    // Button feedback
+    excuseBtn.classList.add('shake');
+    setTimeout(() => excuseBtn.classList.remove('shake'), 500);
+}
+
+// ============================================
+// CROSSHAIR ROAST
+// ============================================
+
+function roastCrosshair() {
+    const color = crosshairColor.value;
+    const size = crosshairSize.value;
+    const style = crosshairStyle.value;
+    
+    const colorRoast = crosshairRoasts.color[color];
+    const sizeRoast = crosshairRoasts.size[size];
+    const styleRoast = crosshairRoasts.style[style];
+    
+    crosshairRoast.innerHTML = `
+        <p class="roast-item">🎨 ${colorRoast}</p>
+        <p class="roast-item">📏 ${sizeRoast}</p>
+        <p class="roast-item">✨ ${styleRoast}</p>
+    `;
+    
+    // Button feedback
+    crosshairBtn.classList.add('shake');
+    setTimeout(() => crosshairBtn.classList.remove('shake'), 500);
+}
+
+// ============================================
+// TEAMMATE BINGO
+// ============================================
+
+let bingoChecked = 0;
+
+function generateBingoCard() {
+    bingoChecked = 0;
+    bingoCount.textContent = '0';
+    
+    // Shuffle and pick 9 items
+    const shuffled = [...bingoItems].sort(() => Math.random() - 0.5);
+    const selected = shuffled.slice(0, 9);
+    
+    bingoCard.innerHTML = '';
+    selected.forEach((item, index) => {
+        const cell = document.createElement('div');
+        cell.className = 'bingo-cell';
+        cell.textContent = item;
+        cell.addEventListener('click', () => toggleBingoCell(cell));
+        bingoCard.appendChild(cell);
+    });
+}
+
+function toggleBingoCell(cell) {
+    cell.classList.toggle('checked');
+    bingoChecked = document.querySelectorAll('.bingo-cell.checked').length;
+    bingoCount.textContent = bingoChecked;
+    
+    if (bingoChecked === 9) {
+        bingoCard.classList.add('bingo-complete');
+        setTimeout(() => {
+            alert('🎉 BINGO! You have the worst teammates ever!');
+            bingoCard.classList.remove('bingo-complete');
+        }, 300);
+    }
+}
+
+// ============================================
+// MATCH PREDICTION
+// ============================================
+
+function predictMatch() {
+    const prediction = getRandomItem(matchPredictions);
+    
+    predictionResult.textContent = prediction.result;
+    predictionResult.className = `prediction-result ${prediction.result.toLowerCase()}`;
+    predictionScore.textContent = prediction.score;
+    predictionReason.textContent = prediction.reason;
+    
+    // Button feedback
+    predictionBtn.classList.add('shake');
+    setTimeout(() => predictionBtn.classList.remove('shake'), 500);
+}
+
+// ============================================
+// COMMS SOUNDBOARD
+// ============================================
+
+function initSoundboard() {
+    const buttons = soundboardGrid.querySelectorAll('.sound-btn');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const sound = btn.dataset.sound;
+            const comms = soundboardComms[sound];
+            const randomComm = getRandomItem(comms);
+            
+            soundboardOutput.innerHTML = `<p class="comm-text">"📢 ${randomComm}"</p>`;
+            soundboardOutput.classList.add('flash');
+            setTimeout(() => soundboardOutput.classList.remove('flash'), 300);
+            
+            btn.classList.add('active');
+            setTimeout(() => btn.classList.remove('active'), 200);
+        });
+    });
+}
+
+// ============================================
 // EVENT LISTENERS
 // ============================================
 
@@ -558,6 +869,21 @@ closeIdle.addEventListener('click', () => {
 // Theme Toggle
 themeBtn.addEventListener('click', toggleTheme);
 
+// Cursed Loadout
+loadoutBtn.addEventListener('click', generateCursedLoadout);
+
+// Excuse Generator
+excuseBtn.addEventListener('click', generateExcuse);
+
+// Crosshair Roast
+crosshairBtn.addEventListener('click', roastCrosshair);
+
+// Bingo
+bingoBtn.addEventListener('click', generateBingoCard);
+
+// Match Prediction
+predictionBtn.addEventListener('click', predictMatch);
+
 // Reset idle timer on any interaction
 document.addEventListener('mousemove', resetIdleTimer);
 document.addEventListener('keypress', resetIdleTimer);
@@ -580,6 +906,12 @@ function init() {
     
     // Initial patch notes
     generatePatchNotes();
+    
+    // Initialize bingo card
+    generateBingoCard();
+    
+    // Initialize soundboard
+    initSoundboard();
     
     console.log('%c🎮 VALORANT Fun Page Loaded!', 'color: #ff4655; font-size: 20px; font-weight: bold;');
     console.log('%cMade with 💔 and caffeine', 'color: #8b978f; font-size: 12px;');

@@ -175,6 +175,175 @@
             </button>
         </section>
 
+        <!-- Section 7: Cursed Loadout Generator -->
+        <section class="section loadout-section" id="loadout-section">
+            <div class="section-header">
+                <h2 class="section-title">🎰 Cursed Loadout Generator</h2>
+                <p class="section-desc">The loadout that guarantees a loss.</p>
+            </div>
+            
+            <div class="loadout-display">
+                <div class="loadout-card" id="loadout-card">
+                    <div class="loadout-item">
+                        <span class="loadout-label">🔫 Weapon:</span>
+                        <span class="loadout-value" id="loadout-weapon">???</span>
+                    </div>
+                    <div class="loadout-item">
+                        <span class="loadout-label">🛡️ Armor:</span>
+                        <span class="loadout-value" id="loadout-armor">???</span>
+                    </div>
+                    <div class="loadout-item">
+                        <span class="loadout-label">⚠️ Challenge:</span>
+                        <span class="loadout-value" id="loadout-challenge">???</span>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn btn-loadout" id="loadout-btn">
+                <span class="btn-icon">🎰</span>
+                Generate Cursed Loadout
+            </button>
+        </section>
+
+        <!-- Section 8: Excuse Generator -->
+        <section class="section excuse-section" id="excuse-section">
+            <div class="section-header">
+                <h2 class="section-title">🗣️ Excuse Generator</h2>
+                <p class="section-desc">Why you REALLY lost that round.</p>
+            </div>
+            
+            <div class="excuse-display">
+                <div class="excuse-card" id="excuse-card">
+                    <p class="excuse-text" id="excuse-text">"Click to generate your excuse..."</p>
+                </div>
+                <div class="excuse-rating" id="excuse-rating">
+                    <span>Believability: </span>
+                    <span id="excuse-stars">⭐⭐⭐⭐⭐</span>
+                </div>
+            </div>
+            
+            <button class="btn btn-excuse" id="excuse-btn">
+                <span class="btn-icon">🗣️</span>
+                Generate Excuse
+            </button>
+        </section>
+
+        <!-- Section 9: Crosshair Roast -->
+        <section class="section crosshair-section" id="crosshair-section">
+            <div class="section-header">
+                <h2 class="section-title">🎯 Crosshair Roast</h2>
+                <p class="section-desc">Let us judge your crosshair settings.</p>
+            </div>
+            
+            <div class="crosshair-display">
+                <div class="crosshair-inputs">
+                    <div class="crosshair-input-group">
+                        <label>Color:</label>
+                        <select id="crosshair-color">
+                            <option value="green">Green</option>
+                            <option value="cyan">Cyan</option>
+                            <option value="white">White</option>
+                            <option value="pink">Pink</option>
+                            <option value="yellow">Yellow</option>
+                        </select>
+                    </div>
+                    <div class="crosshair-input-group">
+                        <label>Size:</label>
+                        <select id="crosshair-size">
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                            <option value="huge">HUGE</option>
+                        </select>
+                    </div>
+                    <div class="crosshair-input-group">
+                        <label>Style:</label>
+                        <select id="crosshair-style">
+                            <option value="dot">Dot Only</option>
+                            <option value="cross">Cross</option>
+                            <option value="circle">Circle</option>
+                            <option value="complex">Complex</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="crosshair-roast" id="crosshair-roast">
+                    <p>Select your settings and prepare to be roasted...</p>
+                </div>
+            </div>
+            
+            <button class="btn btn-crosshair" id="crosshair-btn">
+                <span class="btn-icon">🔥</span>
+                Roast My Crosshair
+            </button>
+        </section>
+
+        <!-- Section 10: Teammate Bingo -->
+        <section class="section bingo-section" id="bingo-section">
+            <div class="section-header">
+                <h2 class="section-title">📋 Teammate Bingo</h2>
+                <p class="section-desc">How many can you check off in one game?</p>
+            </div>
+            
+            <div class="bingo-display">
+                <div class="bingo-card" id="bingo-card">
+                    <!-- Bingo cells will be generated by JS -->
+                </div>
+                <div class="bingo-status" id="bingo-status">
+                    <span>Checked: </span><span id="bingo-count">0</span>/9
+                </div>
+            </div>
+            
+            <button class="btn btn-bingo" id="bingo-btn">
+                <span class="btn-icon">🔄</span>
+                New Bingo Card
+            </button>
+        </section>
+
+        <!-- Section 11: Match Prediction -->
+        <section class="section prediction-section" id="prediction-section">
+            <div class="section-header">
+                <h2 class="section-title">🔮 Match Prediction</h2>
+                <p class="section-desc">100% accurate prophecy of your next game.</p>
+            </div>
+            
+            <div class="prediction-display">
+                <div class="prediction-card" id="prediction-card">
+                    <div class="prediction-result" id="prediction-result">???</div>
+                    <div class="prediction-score" id="prediction-score">?? - ??</div>
+                    <div class="prediction-reason" id="prediction-reason">Click to see your fate...</div>
+                </div>
+            </div>
+            
+            <button class="btn btn-prediction" id="prediction-btn">
+                <span class="btn-icon">🔮</span>
+                Predict My Match
+            </button>
+        </section>
+
+        <!-- Section 12: Comms Soundboard -->
+        <section class="section soundboard-section" id="soundboard-section">
+            <div class="section-header">
+                <h2 class="section-title">🎵 Comms Soundboard</h2>
+                <p class="section-desc">Classic Valorant voice lines (text edition).</p>
+            </div>
+            
+            <div class="soundboard-display">
+                <div class="soundboard-grid" id="soundboard-grid">
+                    <button class="sound-btn" data-sound="rush">🏃 RUSH B</button>
+                    <button class="sound-btn" data-sound="save">💰 SAVE</button>
+                    <button class="sound-btn" data-sound="rotate">🔄 ROTATE</button>
+                    <button class="sound-btn" data-sound="diff">😤 DIFF</button>
+                    <button class="sound-btn" data-sound="nt">👍 NT</button>
+                    <button class="sound-btn" data-sound="gg">🤝 GG</button>
+                    <button class="sound-btn" data-sound="ff">🏳️ FF 15</button>
+                    <button class="sound-btn" data-sound="clutch">🔥 CLUTCH OR KICK</button>
+                </div>
+                <div class="soundboard-output" id="soundboard-output">
+                    <p>Click a button to hear the comms...</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
